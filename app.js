@@ -1,19 +1,3 @@
-//TRADUTOR API
-
-async function translateText(text, sourceLang, targetLang) {
-    const encodedText = encodeURIComponent(text);
-    const apiUrl = `https://api.mymemory.translated.net/get?q=${encodedText}&langpair=${sourceLang}|${targetLang}`;
-    
-    try {
-      const response = await fetch(apiUrl);
-      const data = await response.json();
-      const translatedText = data.responseData.translatedText;
-      return translatedText;
-    } catch (error) {
-      console.error('Erro na tradução:', error);
-      return text; // Retorna o texto original em caso de erro
-    }
-  }
 //JOGOS FREE RANDOM
 const url = 'https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by=alphabetical';
 const options = {
@@ -36,8 +20,6 @@ const options = {
         const gameImage = document.querySelector('.game-card__image');
         const gameTitle = document.querySelector('.game-card__title');
         const gameDescription = document.querySelector('.game-card__description');
-        const translatedDescription = await translateText(randomGame.short_description, 'en', 'pt-BR');
-            gameDescription.textContent = translatedDescription;
         const gameGenre = document.querySelector('.game-card__genre');
         const gamePlatform = document.querySelector('.game-card__platform');
         const gameDeveloper = document.querySelector('.game-card__developer');
@@ -47,7 +29,7 @@ const options = {
         gameImage.src = randomGame.thumbnail;
         gameImage.alt = randomGame.title;
         gameTitle.textContent = randomGame.title;
-        translatedDescription.textContent = randomGame.short_description;
+        gameDescription.textContent = randomGame.short_description;
         gameGenre.textContent = `Gênero: ${randomGame.genre}`;
         gamePlatform.textContent = `Plataforma: ${randomGame.platform}`;
         gameDeveloper.textContent = `Desenvolvedora: ${randomGame.developer}`;
@@ -82,8 +64,6 @@ document.getElementById('search-btn').addEventListener('click', async function()
             const gameImage = document.querySelector('.game-card__image');
             const gameTitle = document.querySelector('.game-card__title');
             const gameDescription = document.querySelector('.game-card__description');
-            const translatedDescription = await translateText(randomGame.short_description, 'en', 'pt-BR');
-            gameDescription.textContent = translatedDescription;
             const gameGenre = document.querySelector('.game-card__genre');
             const gamePlatform = document.querySelector('.game-card__platform');
             const gameDeveloper = document.querySelector('.game-card__developer');
@@ -92,7 +72,7 @@ document.getElementById('search-btn').addEventListener('click', async function()
             gameImage.src = randomGame.thumbnail;
             gameImage.alt = randomGame.title;
             gameTitle.textContent = randomGame.title;
-            translatedDescription.textContent = randomGame.short_description;
+            gameDescription.textContent = randomGame.short_description;
             gameGenre.textContent = `Gênero: ${randomGame.genre}`;
             gamePlatform.textContent = `Plataforma: ${randomGame.platform}`;
             gameDeveloper.textContent = `Desenvolvedora: ${randomGame.developer}`;
