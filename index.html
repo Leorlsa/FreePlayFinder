@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>GameMystery</title>
+</head>
+<body>
+      
+    <h1 class="tittle">Bem-vindo(a) ao FreePlayFinder</h1> 
+    <iframe id="background-iframe" src="background/background.html"></iframe>
+   
+    <div class="genre-selector">
+        <label for="genre-select" id="text-genero">Gênero:</label>
+        <select id="genre-select">
+            <option value="all">Todos</option>
+            <option value="mmorpg">MMORPG</option>
+            <option value="shooter">Tiro</option>
+            <option value="strategy">Estratégia</option>
+            <option value="racing">Corrida</option>
+            <option value="sports">Esportes</option>
+            <option value="sandbox">Sandbox</option>
+            <option value="open-world">Mundo Aberto</option>
+            <option value="survival">Sobrevivência</option>
+            <option value="pvp">PvP</option>
+            <option value="pve">PvE</option>
+            <option value="pixel">Pixel</option>
+            <option value="zombie">Zumbi</option>
+            <option value="turn-based">Turn-Based</option>
+            <option value="first-person">Primeira Pessoa</option>
+            <option value="third-person">Terceira Pessoa</option>
+            <option value="side-scroller">Side-Scroller</option>
+            <option value="fantasy">Fantasia</option>
+            <option value="sci-fi">Ficção Científica</option>
+            <option value="action">Ação</option>
+            <option value="tower-defense">Tower Defense</option>
+            <option value="horror">Terror</option>
+        </select>
+        
+        <button id="search-btn">Buscar</button>
+    </div>
+
+    <div class="game-card">
+        <img src="https://www.freetogame.com/g/306/thumbnail.jpg" alt="Nome do Jogo" class="game-card__image">
+        <h2 class="game-card__title">Nome do Jogo</h2>
+        <p class="game-card__description">Descrição do Jogo</p>
+        <p class="game-card__genre">Gênero: Ação</p>
+        <p class="game-card__platform">Plataforma: PC</p>
+        <p class="game-card__developer">Desenvolvedora: Nome da Desenvolvedora</p>
+        <a href="#" class="game-card__link">Saiba Mais</a>
+    </div>
+
+ 
+    <script src="app.js"></script>
+</body>
+</html>

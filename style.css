@@ -1,0 +1,238 @@
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Adicionado para empilhar verticalmente os elementos */
+    font-family: 'Open Sans', sans-serif;
+
+}
+.tittle {
+    color: #fffafa;
+    text-align: center;
+    font-size: 24px;
+    padding: 16px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .tittle {
+      font-size: 18px;
+      padding: 12px;
+    }
+}
+#background-iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: -1;
+}
+.game-card {
+    width: 300px;
+    border: 1px solid #fffafa;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    background-color: #fffafa; /* Adicionado background-color */
+    position: relative;
+}
+#text-genero{
+    color:#fffafa
+}
+.game-card__image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+.game-card__title {
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+.game-card__description {
+    margin-top: 8px;
+}
+
+.game-card__link {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.game-card__link:hover {
+    background-color: #0056b3;
+}
+#genre-select {
+    width: 200px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none; /* Remove a aparência padrão do select */
+    background-color: #f2f2f2;
+    background-image: url("path/to/arrow-icon.png"); /* Adicione uma imagem de ícone para a seta */
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+/* Estilize a seta do select */
+#genre-select::-ms-expand {
+    display: none; /* Remove a seta do IE */
+}
+
+/* Estilize as opções do select */
+#genre-select option {
+    padding: 8px;
+}
+.genre-selector {
+    margin-bottom: 20px;
+}
+.genre-selector label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.genre-selector select {
+    width: 200px;
+    margin-right: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.genre-selector button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.genre-selector button:hover {
+    background-color: #0056b3;
+}
+#search-btn {
+    padding: 11px 24px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #search-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .favorite {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 10px;
+    bottom: 18px;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #272727;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.3s;
+  }
+  
+  .sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: #272727;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.3s;
+  }
+  
+  .sidebar a {
+    padding: 12px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar a:hover {
+    background-color: #444;
+  }
+  
+  .sidebar.expanded {
+    width: 200px;
+  }
+  .sidebar {
+    background-color: #333;
+    padding: 16px;
+  }
+  
+  .sidebar__game-card {
+    width: 80%;
+    border: 1px solid #fffafa;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    background-color: #fffafa;
+    position: relative;
+    margin-bottom: 16px;
+  }
+  
+  .sidebar__game-card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .sidebar__game-card-title {
+    font-size: 20px;
+    margin-top: 12px;
+    color: #333;
+  }
+  
+  .sidebar__game-card-description {
+    margin-top: 8px;
+    color: #666;
+  }
+  
+  .sidebar__game-card-info {
+    color: #999;
+    margin-top: 4px;
+  }
+  
+  .sidebar__game-card-link {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .sidebar__game-card-link:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  
